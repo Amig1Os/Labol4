@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товарів - Магазин ігрових відеокарт та процесорів</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background-color: #34495e;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            color: white;
+            transform: scale(1.05);
+        }
+        nav ul li a:active {
+            background-color: #16a085;
+        }
+        section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .filter {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .filter h3 {
+            margin-top: 0;
+        }
+        .filter ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .filter ul li {
+            margin-bottom: 10px;
+        }
+        .filter ul li a {
+            text-decoration: none;
+            color: #1abc9c;
+        }
+        .filter ul li a:hover {
+            text-decoration: underline;
+        }
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .product-item {
+            background-color: white;
+            margin: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            width: 30%;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .product-item h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        .product-item button {
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .product-item button:hover {
+            background-color: #1abc9c;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #34495e;
+            color: white;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+            .product-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Каталог товарів</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="reviews.html">Відгуки</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <div class="filter">
+            <h3>Фільтри товарів</h3>
+            <h4>Категорії:</h4>
+            <ul>
+                <li><a href="#">Відеокарти</a></li>
+                <li><a href="#">Процесори</a></li>
+            </ul>
+        </div>
+
+        <h2>Товари</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="videocard.jpg" alt="Відеокарта">
+                <h3>NVIDIA GeForce RTX 3080</h3>
+                <p>Ціна: 25000 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+            <div class="product-item">
+                <img src="videocard2.jpg" alt="Відеокарта">
+                <h3>AMD Radeon RX 6900 XT</h3>
+                <p>Ціна: 23000 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+            <div class="product-item">
+                <img src="processor.jpg" alt="Процесор">
+                <h3>Intel Core i9-11900K</h3>
+                <p>Ціна: 15000 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+            <div class="product-item">
+                <img src="processor2.jpg" alt="Процесор">
+                <h3>AMD Ryzen 9 5950X</h3>
+                <p>Ціна: 17000 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+        </div>
+
+        <h2>Порівняння характеристик</h2>
+        <table>
+            <tr>
+                <th>Назва</th>
+                <th>Частота</th>
+                <th>Кількість ядер</th>
+                <th>Ціна</th>
+            </tr>
+            <tr>
+                <td>NVIDIA GeForce RTX 3080</td>
+                <td>1.44 GHz</td>
+                <td>8704</td>
+                <td>25000 грн</td>
+            </tr>
+            <tr>
+                <td>AMD Radeon RX 6900 XT</td>
+                <td>1.82 GHz</td>
+                <td>5120</td>
+                <td>23000 грн</td>
+            </tr>
+            <tr>
+                <td>Intel Core i9-11900K</td>
+                <td>3.5 GHz</td>
+                <td>8</td>
+                <td>15000 грн</td>
+            </tr>
+            <tr>
+                <td>AMD Ryzen 9 5950X</td>
+                <td>3.4 GHz</td>
+                <td>16</td>
+                <td>17000 грн</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>© 2024 Магазин ігрових відеокарт та процесорів</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин ігрових відеокарт та процесорів</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav {
+            background-color: #34495e;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            color: white;
+            transform: scale(1.05);
+        }
+        nav ul li a:active {
+            background-color: #16a085;
+        }
+        section {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product-list {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-item {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: calc(33% - 20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+            border: none;
+            border-radius: 8px;
+        }
+        button {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #16a085;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+        /* Стилі для гри */
+        #game-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        #message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .hidden {
+            display: none;
+        }
+        /* Адаптивність */
+        @media (max-width: 768px) {
+            .product-item {
+                width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .product-item {
+                width: 100%;
+            }
+            nav ul {
+                flex-direction: column;
+            }
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ласкаво просимо до магазину ігрових відеокарт та процесорів</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="reviews.html">Відгуки</a></li>
+            <li><a href="contact.html">Контакти</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Чому обрати нас?</h2>
+        <p>Ми пропонуємо найкращі відеокарти та процесори для геймерів, що шукають ідеальну продуктивність для своїх комп'ютерів. Від новачків до професіоналів — у нас є все, що потрібно для ідеального геймінгу!</p>
+        <h2>Виберіть категорію</h2>
+        <h2>Наші популярні товари:</h2>
+        <ul class="product-list">
+            <li><strong>Відеокарта NVIDIA RTX 3080</strong> — Висока продуктивність та підтримка технології Ray Tracing для сучасних ігор.</li>
+            <li><strong>Відеокарта AMD Radeon RX 6800 XT</strong> — Ідеальний вибір для 4K геймінгу з потужною графікою.</li>
+            <li><strong>Процесор Intel Core i9-11900K</strong> — Високочастотний процесор для максимальної продуктивності в іграх та програмуванні.</li>
+            <li><strong>Процесор AMD Ryzen 9 5900X</strong> — Процесор нового покоління з 12 ядрами для професійного використання та ігор.</li>
+        </ul>
+        <h2>Популярні товари</h2>
+        <div class="product-list">
+            <div class="product-item">
+                <img src="videocard.jpg" alt="Відеокарта">
+                <h3>NVIDIA GeForce RTX 3080</h3>
+                <p>Ціна: 25000 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+            <div class="product-item">
+                <img src="processor.jpg" alt="Процесор">
+                <h3>Intel Core i9-11900K</h3>
+                <p>Ціна: 15000 грн</p>
+                <button>Додати в кошик</button>
+            </div>
+        </div>
+        <h2>Як вибрати відеокарту та процесор?</h2>
+        <p>У цьому відео розповідається, як правильно вибрати відеокарту та процесор для вашого комп'ютера. Дивіться поради щодо того, на що звертати увагу при виборі:</p>
+
+        <!-- Додаємо відео з YouTube -->
+        <iframe src="https://www.youtube.com/embed/DSwTDSFyfjY?si=8yLQNFoV8LIpqHLU" title="Як вибрати відеокарту та процесор" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </section>
+
+    <!-- Інтеграція гри "Вгадай число" -->
+    <div id="game-container">
+        <h2>Гра: Вгадай число</h2>
+        <p>Я загадав число від 1 до 100. Спробуй вгадати його!</p>
+        <input type="number" id="guess-input" placeholder="Введи число" />
+        <button id="guess-button">Вгадати</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // Ініціалізація гри
+        const randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        document.getElementById('guess-button').addEventListener('click', function() {
+            const userGuess = parseInt(document.getElementById('guess-input').value);
+            attempts++;
+            const messageElement = document.getElementById('message');
+
+            if (isNaN(userGuess)) {
+                messageElement.innerText = 'Будь ласка, введіть число!';
+            } else if (userGuess < 1 || userGuess > 100) {
+                messageElement.innerText = 'Число має бути в діапазоні від 1 до 100!';
+            } else if (userGuess === randomNumber) {
+                messageElement.innerText = `Вітаємо! Ви вгадали число ${randomNumber} за ${attempts} спроб!`;
+            } else if (userGuess < randomNumber) {
+                messageElement.innerText = 'Загадане число більше. Спробуйте ще раз!';
+            } else {
+                messageElement.innerText = 'Загадане число менше. Спробуйте ще раз!';
+            }
+
+            // Очищення поля вводу
+            document.getElementById('guess-input').value = '';
+        });
+
+        const products = {
+            videocards: [
+                { name: 'NVIDIA GeForce RTX 3080', price: '25000 грн', img: 'videocard.jpg' },
+                { name: 'AMD Radeon RX 6900 XT', price: '23000 грн', img: 'videocard2.jpg' }
+            ],
+            processors: [
+                { name: 'Intel Core i9-11900K', price: '15000 грн', img: 'processor.jpg' },
+                { name: 'AMD Ryzen 9 5950X', price: '17000 грн', img: 'processor2.jpg' }
+            ]
+        };
+
+        document.querySelectorAll('.category-button').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const category = this.getAttribute('data-category');
+                document.getElementById('category-title').innerText = category === 'videocards' ? 'Відеокарти' : 'Процесори';
+                const productList = document.getElementById('product-list');
+                productList.innerHTML = '';
+                products[category].forEach(product => {
+                    const item = document.createElement('div');
+                    item.className = 'product-item';
+                    item.innerHTML = `
+                        <img src="${product.img}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>Ціна: ${product.price}</p>
+                        <button>Додати в кошик</button>
+                    `;
+                    productList.appendChild(item);
+                });
+                document.getElementById('products').classList.remove('hidden');
+            });
+        });
+    </script>
+
+    <footer>
+        <p>© 2024 Магазин ігрових відеокарт та процесорів</p>
+    </footer>
+</body>
+</html>
